@@ -47,6 +47,30 @@
     footer { margin-top: 40px; color: var(--muted); font-size: 0.95rem; }
     .grid { display: grid; gap: 14px; }
     .nowrap { white-space: nowrap; }
+
+    /* Side projects block */
+    .side-projects { margin-top: 40px; }
+    .side-projects-header { display: grid; gap: 8px; margin-bottom: 16px; }
+    .side-projects-title { font-size: 1.35rem; text-transform: none; letter-spacing: 0; color: var(--fg); }
+    .side-projects-subtitle { color: var(--muted); font-size: 0.96rem; max-width: 620px; }
+    .side-projects-pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .side-pill { font-size: 0.8rem; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--border); background: #f8fafc; text-transform: uppercase; letter-spacing: 0.06em; }
+    .side-card { display: grid; gap: 18px; }
+    .side-section-label { font-size: 1.1rem; font-weight: 600; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+    .side-project { border-top: 1px solid var(--border); padding-top: 16px; margin-top: 10px; margin-bottom: 50px; display: grid; gap: 10px; }
+    .side-project:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .side-header-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+    .side-project h3 { margin: 0; font-size: 1.02rem; }
+    .side-tagline { font-size: 0.9rem; color: var(--muted); }
+    .side-body { font-size: 0.95rem; }
+    .side-links { margin-top: 2px; }
+    .side-link-btn { display: inline-block; font-size: 0.9rem; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border); background: #f8fafc; }
+    .side-link-btn:hover { background: #eef2f7; text-decoration: none; }
+    .side-thumbs { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 6px; }
+    .side-thumb-box { position: relative; border-radius: 12px; border: 1px dashed var(--border); background: #f8fafc; padding-top: 62%; overflow: hidden; }
+    .side-thumb-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .side-thumb-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
     @media (max-width: 900px) {
       main { grid-template-columns: 1fr; }
       header { flex-direction: column; align-items: flex-start; }
@@ -58,6 +82,7 @@
       header { border-bottom: none; padding-bottom: 0; }
       .card { border: none; padding: 0; }
       a { color: inherit; text-decoration: none; }
+      .side-thumb-box { border-style: solid; }
     }
   </style>
   <script type="application/ld+json">
@@ -192,6 +217,145 @@
         </section>
       </aside>
     </main>
+
+    <section aria-labelledby="side-projects" class="side-projects">
+      <div class="card side-card">
+        <div class="side-projects-header">
+          <div class="side-projects-title" id="side-projects">Side projects</div>
+          <div class="side-projects-subtitle">
+            Browser extensions, self-hosted utilities, and tiny CLI tools that do one thing well. Built in spare time, focused on reliability, clarity, and controllable infrastructure rather than shiny dashboards.
+          </div>
+          <div class="side-projects-pill-row">
+            <span class="side-pill">Self-hosted first</span>
+            <span class="side-pill">Pragmatic automation</span>
+            <span class="side-pill">Clear docs &amp; sane defaults</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="side-section-label">Core</div>
+          <div class="side-project">
+            <div class="side-header-row">
+              <h3>Self-Hosted TG Alerts — Uptime Monitor</h3>
+              <span class="side-tagline">Lightweight uptime checks with Telegram notifications.</span>
+            </div>
+            <div class="side-body">
+              Self-hosted uptime monitoring service with simple configuration and clear alerting rules. Simple to deploy, easy to reason about, independent of third-party services.
+            </div>
+            <div class="side-links">
+              <a class="side-link-btn" href="https://github.com/pohape/self-hosted-tg-alerts-uptime-monitor" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <div class="side-thumbs">
+              <div class="side-thumb-box">
+                <img class="side-thumb-img" src="https://raw.githubusercontent.com/pohape/self-hosted-tg-alerts-uptime-monitor-assets/main/step9.gif" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="side-section-label">Browser extensions</div>
+
+          <div class="side-project">
+            <div class="side-header-row">
+              <h3>Polish Driving Exam Tests (in Russian)</h3>
+              <span class="side-tagline">Exam prep for Russian-speaking learners.</span>
+            </div>
+            <div class="side-body">
+              <table border="0">
+                <tr>
+                  <td width="130">
+                    <a class="side-link-btn" href="https://github.com/pohape/polish-driving-exam-tests-prep-in-russian" target="_blank" rel="noopener">View on GitHub</a>
+                  </td>
+                  <td>Browser extension that helps Russian-speaking users practice for Polish driving-theory tests with AI translations and less clutter. Keeps the focus on questions with top quality translations.</td>
+                </tr>
+              </table>
+            </div>
+            <div class="side-thumbs">
+              <div class="side-thumb-box">
+                <img class="side-thumb-img" src="https://raw.githubusercontent.com/pohape/teoria_pl_tests_translate/main/images/screenshots/1.png" />
+              </div>
+              <div class="side-thumb-box">
+                <img class="side-thumb-img" src="https://raw.githubusercontent.com/pohape/teoria_pl_tests_translate/main/images/screenshots/3.png" />
+              </div>
+            </div>
+          </div>
+
+          <div class="side-project">
+            <div class="side-header-row">
+              <h3>Egzamin Zawodowy (in Russian)</h3>
+              <span class="side-tagline">Exam prep for Russian-speaking learners.</span>
+            </div>
+            <div class="side-body">
+              Browser extension for Russian-speaking students preparing for Poland’s professional qualification exams. Makes practice less painful by providing a top quality AI translations.
+            </div>
+            <div class="side-links">
+              <a class="side-link-btn" href="https://github.com/Olesyaiam/egzamin-zawodowy-in-russian" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <div class="side-thumbs">
+              <div class="side-thumb-box">
+                <img class="side-thumb-img" src="https://raw.githubusercontent.com/Olesyaiam/egzamin-zawodowy-in-russian/main/screenshots/3.png" />
+              </div>
+              <div class="side-thumb-box">
+                <img class="side-thumb-img" src="https://raw.githubusercontent.com/Olesyaiam/egzamin-zawodowy-in-russian/main/screenshots/1.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="side-section-label">CLI utilities</div>
+
+          <div class="side-project">
+            <div class="side-header-row">
+              <h3>command-line-scanner</h3>
+              <span class="side-tagline">Quick scanning workflows straight from the terminal.</span>
+            </div>
+            <div class="side-body">
+              Small command-line helper for quick scanning tasks. Detects a scanner automatically. Predictable, designed to fit into existing shell habits without messing with UI.
+            </div>
+            <div class="side-links">
+              <a class="side-link-btn" href="https://github.com/pohape/command-line-scanner" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+          </div>
+
+          <div class="side-project">
+            <div class="side-header-row">
+              <h3>md5-filesystem-tools</h3>
+              <span class="side-tagline">Checksums without ceremony.</span>
+            </div>
+            <div class="side-body">
+              Tiny MD5 helpers for filesystem workflows — checksum generation and verification that stay out of the way. Useful for quick integrity checks and search for duplicates.
+            </div>
+            <div class="side-links">
+              <a class="side-link-btn" href="https://github.com/pohape/md5-filesystem-tools" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="side-section-label">Hardware / robotics</div>
+
+          <div class="side-project">
+            <div class="side-header-row">
+              <h3>Autopilot Warehouse (prototype)</h3>
+              <span class="side-tagline">Arduino-based warehouse robot prototype.</span>
+            </div>
+            <div class="side-body">
+              Prototype warehouse robot capable of autonomous navigation, automated pickup/drop-off of boxes, and real-time obstacle avoidance, emphasizing intelligent behavior on minimal hardware.
+            </div>
+            <div class="side-links">
+              <a class="side-link-btn" href="https://github.com/pohape/autopilot-warehouse" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <div class="side-thumbs">
+              <div class="side-thumb-box">
+                <img class="side-thumb-img" src="https://raw.githubusercontent.com/pohape/AutopilotWarehouse/main/Pictures/Car.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </body>
 </html>
