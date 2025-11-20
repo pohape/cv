@@ -45,7 +45,16 @@
     .chip { font-size: 0.9rem; padding: 6px 10px; border-radius: 999px; background: var(--chip-bg); border: 1px solid var(--border); }
     .muted { color: var(--muted); }
     footer { margin-top: 40px; color: var(--muted); font-size: 0.95rem; }
-    .grid { display: grid; gap: 14px; }
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    /* не растягивать содержимое правой колонки по всей высоте */
+    aside.grid {
+      align-content: start;
+      align-items: start;
+    }
     .nowrap { white-space: nowrap; }
 
     /* Side projects block */
@@ -104,16 +113,15 @@
     <header>
       <div class="title">
         <h1>Pavel Geveiler</h1>
-        <br />
+        <div class="actions">
+          <a class="btn" href="mailto:pavelgeveiler@gmail.com">pavelgeveiler@gmail.com</a>
+          <a class="btn" href="https://github.com/pohape" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="#" onclick="window.print();return false;">Print / Save as PDF</a>
+        </div>
         <div class="subtitle">Backend Developer with more than 15 years of experience — PHP, Python, Linux</div>
         <div class="meta-line">Warsaw, Poland</div>
         <div class="meta-line">Open to remote • Availability: Part-time (0.5 FTE)</div>
         <div class="meta-line">Open Source projects: <a href="https://github.com/pohape" target="_blank" rel="noopener">github.com/pohape</a></div>
-      </div>
-      <div class="actions">
-        <a class="btn" href="mailto:pavelgeveiler@gmail.com">pavelgeveiler@gmail.com</a>
-        <a class="btn" href="https://github.com/pohape" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="#" onclick="window.print();return false;">Print / Save as PDF</a>
       </div>
     </header>
 
@@ -176,9 +184,9 @@
       </div>
 
       <aside class="grid">
-        <section aria-labelledby="skills" style="gap: 0px;">
-          <h2 id="skills" style="height: 0px;">Skills</h2>
-          <div class="card" style="padding-bottom: 0px">
+        <section aria-labelledby="skills">
+          <h2 id="skills">Skills</h2>
+          <div class="card">
             <div class="chips">
               <span class="chip">Python</span>
               <span class="chip">Flask</span>
@@ -197,8 +205,8 @@
           </div>
         </section>
 
-        <section aria-labelledby="languages" style="gap: 0px; margin-top: 25px">
-          <h2 id="languages" style="height: 0px;">Languages</h2>
+        <section aria-labelledby="languages">
+          <h2 id="languages">Languages</h2>
           <div class="card" style="padding-bottom: 0px; height: 120px;">
             <ul>
               <li>Russian — Native</li>
@@ -208,9 +216,9 @@
           </div>
         </section>
 
-        <section aria-labelledby="approach" style="gap: 0px; margin-top: 0px">
-          <h2 id="approach" style="height: 0px;">Strengths &amp; Approach</h2>
-          <div class="card" style="padding-bottom: 0px">
+        <section aria-labelledby="approach">
+          <h2 id="approach">Strengths &amp; Approach</h2>
+          <div class="card">
             <ul>
               <li>Quickly learn the client’s business context.</li>
               <li>Data pipelines: scraping, normalization, storage, and reporting.</li>
