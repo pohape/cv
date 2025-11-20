@@ -58,15 +58,14 @@
     .nowrap { white-space: nowrap; }
 
     /* Side projects block */
-    .side-projects { margin-top: 40px; }
+    .side-projects { margin-top: 30px; }
     .side-projects-header { display: grid; gap: 8px; margin-bottom: 16px; }
-    .side-projects-title { font-size: 1.35rem; text-transform: none; letter-spacing: 0; color: var(--fg); }
     .side-projects-subtitle { color: var(--muted); font-size: 0.96rem; max-width: 620px; }
     .side-projects-pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
     .side-pill { font-size: 0.8rem; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--border); background: #f8fafc; text-transform: uppercase; letter-spacing: 0.06em; }
     .side-card { display: grid; gap: 18px; }
     .side-section-label { font-size: 1.1rem; font-weight: 600; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
-    .side-project { border-top: 1px solid var(--border); padding-top: 16px; margin-top: 10px; margin-bottom: 50px; display: grid; gap: 10px; }
+    .side-project { border-top: 1px solid var(--border); padding-top: 16px; margin-top: 10px; margin-bottom: 20px; display: grid; gap: 10px; }
     .side-project:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
     .side-header-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
     .side-project h3 { margin: 0; font-size: 1.02rem; }
@@ -110,7 +109,6 @@
 </head>
 <body>
   <div class="wrap">
-    <header>
       <div class="title">
         <h1>Pavel Geveiler</h1>
         <div class="actions">
@@ -123,7 +121,6 @@
         <div class="meta-line">Open to remote • Availability: Part-time (0.5 FTE)</div>
         <div class="meta-line">Open Source projects: <a href="https://github.com/pohape" target="_blank" rel="noopener">github.com/pohape</a></div>
       </div>
-    </header>
 
     <main>
       <div class="grid">
@@ -187,7 +184,7 @@
         <section aria-labelledby="skills">
           <h2 id="skills">Skills</h2>
           <div class="card">
-            <div class="chips">
+            <div class="chips" style="margin-bottom: 6px">
               <span class="chip">Python</span>
               <span class="chip">Flask</span>
               <span class="chip">SQLAlchemy</span>
@@ -233,19 +230,8 @@
     </main>
 
     <section aria-labelledby="side-projects" class="side-projects">
+      <h2 id="experience">Side projects</h2>
       <div class="card side-card">
-        <div class="side-projects-header">
-          <div class="side-projects-title" id="side-projects">Side projects</div>
-          <div class="side-projects-subtitle">
-            Browser extensions, self-hosted utilities, and tiny CLI tools that do one thing well. Built in spare time, focused on reliability, clarity, and controllable infrastructure rather than shiny dashboards.
-          </div>
-          <div class="side-projects-pill-row">
-            <span class="side-pill">Self-hosted first</span>
-            <span class="side-pill">Pragmatic automation</span>
-            <span class="side-pill">Clear docs &amp; sane defaults</span>
-          </div>
-        </div>
-
         <div>
           <div class="side-section-label">Core</div>
           <div class="side-project">
